@@ -13,3 +13,35 @@ React (프론트엔드), Flask (백엔드), MySQL (데이터베이스)를 사용
 ```bash
 npm install
 npm run dev
+
+백엔드 실행: (Flask + MySQL)
+pip install -r requirements.txt
+python server.py
+
+
+(server.py: Flask API 서버
+insert_csv_to_mysql.py: 분석된 BGM 데이터를 DB에 삽입
+videos_with_moods.csv: 감정 분석된 유튜브 영상 데이터
+.env.example: DB 접속 정보 템플릿 (직접 .env로 복사해서 사용) )
+
+.env 설정 예시:
+MYSQL_HOST=localhost
+MYSQL_PORT=3306
+MYSQL_USER=root
+MYSQL_PASSWORD=Asdf304053@
+MYSQL_DATABASE=bgm_project
+
+
+파일구성:
+📁 src/
+📁 public/
+📄 server.py
+📄 insert_csv_to_mysql.py
+📄 videos_with_moods.csv
+📄 .env.example
+📄 package.json
+📄 tailwind.config.js
+📄 postcss.config.js
+📄 README.md
+
+
